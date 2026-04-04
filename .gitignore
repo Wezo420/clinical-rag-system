@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Data (don't commit indices or uploads)
+data/faiss_index*
+data/uploads/
+data/embeddings/
+data/raw_corpus.jsonl
+data/eval_results.json
+
+# Logs
+logs/
+*.log
+
+# Node.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env.local
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.pytest_cache
+
+# Docker
+*.pid
+
+# Secrets
+*.pem
+*.key
+docker/nginx/ssl/
+
+# Model cache
+.cache/
