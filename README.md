@@ -7,13 +7,13 @@ A production-grade, end-to-end clinical intelligence system powered by Retrieval
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
 │                          FRONTEND (Next.js)                         │
-│   Input Form (text + image) │ Dashboard │ Results UI               │
+│   Input Form (text + image) │ Dashboard │ Results UI                │
 └──────────────────┬──────────────────────────────────────────────────┘
                    │ HTTPS/REST
 ┌──────────────────▼──────────────────────────────────────────────────┐
 │                       BACKEND (FastAPI)                             │
-│  /analyze-case │ /upload-image │ /results/{id}                     │
-│  Auth (JWT) │ Rate Limiting │ Input Validation                     │
+│  /analyze-case │ /upload-image │ /results/{id}                      │
+│  Auth (JWT) │ Rate Limiting │ Input Validation                      │
 └──────┬────────────────┬──────────────────┬──────────────────────────┘
        │                │                  │
 ┌──────▼──────┐  ┌──────▼──────┐  ┌───────▼───────┐
@@ -23,9 +23,9 @@ A production-grade, end-to-end clinical intelligence system powered by Retrieval
 └──────┬──────┘  └──────┬──────┘  └───────────────┘
        │                │
 ┌──────▼────────────────▼──────────────────────────┐
-│              Data Layer                           │
-│  PostgreSQL │ MongoDB │ FAISS Index │ S3/Local    │
-│  PubMed │ MIMIC Data │ Medical Images             │
+│              Data Layer                          │
+│  PostgreSQL │ MongoDB │ FAISS Index │ S3/Local   │
+│  PubMed │ MIMIC Data │ Medical Images            │
 └──────────────────────────────────────────────────┘
 ```
 
