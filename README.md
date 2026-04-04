@@ -16,11 +16,11 @@ A production-grade, end-to-end clinical intelligence system powered by Retrieval
 │  Auth (JWT) │ Rate Limiting │ Input Validation                      │
 └──────┬────────────────┬──────────────────┬──────────────────────────┘
        │                │                  │
-┌──────▼──────┐  ┌──────▼──────┐  ┌───────▼───────┐
-│  RAG Service │  │  ML Service  │  │  Groq LLM API │
-│  FAISS+BM25  │  │  CLIP/Embed  │  │  mixtral-8x7b │
-│  Re-ranking  │  │  Multimodal  │  │  llama3-70b   │
-└──────┬──────┘  └──────┬──────┘  └───────────────┘
+┌──────▼──────┐  ┌──────▼──────┐  ┌───────▼───────────────────┐
+│  RAG Service│  │  ML Service │  │       Groq LLM API        │
+│  FAISS+BM25 │  │  CLIP/Embed │  │       mixtral-8x7b        │
+│  Re-ranking │  │  Multimodal │  │  llama3.3-70b-versatile   │
+└──────┬──────┘  └──────┬──────┘  └───────────────────────────┘
        │                │
 ┌──────▼────────────────▼──────────────────────────┐
 │              Data Layer                          │
