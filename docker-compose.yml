@@ -6,8 +6,8 @@ services:
   # ─────────────────────────────────────────────────────────────
   backend:
     build:
-      context: ./backend
-      dockerfile: ../docker/Dockerfile.backend
+      context: . #/backend
+      dockerfile: docker/Dockerfile.backend
     container_name: clinical-rag-backend
     restart: unless-stopped
     ports:
@@ -43,8 +43,8 @@ services:
   # ─────────────────────────────────────────────────────────────
   ml-service:
     build:
-      context: ./ml-service
-      dockerfile: ../docker/Dockerfile.ml
+      context: . #/ml-service
+      dockerfile: docker/Dockerfile.ml
     container_name: clinical-rag-ml
     restart: unless-stopped
     ports:
@@ -72,8 +72,8 @@ services:
   # ─────────────────────────────────────────────────────────────
   frontend:
     build:
-      context: ./frontend
-      dockerfile: ../docker/Dockerfile.frontend
+      context: . #/frontend
+      dockerfile: docker/Dockerfile.frontend
     container_name: clinical-rag-frontend
     restart: unless-stopped
     ports:
