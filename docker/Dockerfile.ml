@@ -16,7 +16,7 @@ WORKDIR /app
 FROM base AS deps
 COPY ml-service/requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+    pip install --default-timeout=1000 --retries=20 --no-cache-dir -r requirements.txt
 
 # Pre-download models
 RUN python -c "\
