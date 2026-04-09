@@ -33,7 +33,7 @@ class Settings(BaseSettings):
     GROQ_TEMPERATURE: float = 0.1
 
     # Database
-    DATABASE_URL: str = "postgresql+asyncpg://user:pass@localhost:5432/clinical_rag"
+    DATABASE_URL: str = "postgresql+asyncpg://postgres@localhost:5432/postgres"
     MONGO_URI: str = "mongodb://localhost:27017"
     MONGO_DB: str = "clinical_rag_docs"
 

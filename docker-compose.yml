@@ -16,6 +16,7 @@ services:
       - .env
     environment:
       - POSTGRES_HOST=postgres
+      - POSTGRES_HOST_AUTH_METHOD=trust
       - MONGO_URI=mongodb://mongo:27017
       - REDIS_URL=redis://redis:6379/0
       - ML_SERVICE_URL=http://ml-service:8001
@@ -98,7 +99,7 @@ services:
     environment:
       POSTGRES_DB: clinical_rag
       POSTGRES_USER: clinical_user
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me_in_production}
+      POSTGRES_PASSWORD: pass@123
     volumes:
       - postgres-data:/var/lib/postgresql/data
       - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql

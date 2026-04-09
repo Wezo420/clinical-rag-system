@@ -2,6 +2,9 @@
 Clinical Intelligence RAG System - FastAPI Backend
 Production-grade multimodal medical diagnostics API
 """
+import os
+# This forces the app to look at the 'postgres' user with NO password
+os.environ["DATABASE_URL"] = "postgresql+asyncpg://postgres@localhost:5432/postgres"
 
 import logging
 import time
